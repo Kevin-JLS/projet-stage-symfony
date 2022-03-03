@@ -1,0 +1,21 @@
+# test: 
+#   path: /test/{age} 
+#   controller: App\Controller\TestController::test
+  
+#   # L'âge par défault au cas où aucun paramètre n'est récupéré dans /test/{age}, du coup /test fonctionnera désormmais.
+#   defaults: 
+#     age: 0
+
+#   # Pour forcer l'utilisateur à n'utiliser que des entiers. Sinon (lettres) = error
+#   requirements: 
+#     age: \d+
+
+#   # Contraindre la méthode 
+#   # methods: [GET, POST]
+
+#   # Contrainte sur le host (ici tous les domaines vont fonctionner grâce à {subdomain})
+#   # host: {subdomain}.monsite.com
+#   # host: localhost
+
+#   # Contrainte [https, http]
+#   schemes: [https, http]
