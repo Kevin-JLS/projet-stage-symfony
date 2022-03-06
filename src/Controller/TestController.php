@@ -7,12 +7,16 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class TestController {
+
+    /**
+     * @Route("/", name="index")
+     */
     public function index() {
         dd("Ca fonctionne");
     }
 
     /**
-     * @Route("/test/{age<\d+>?0}", name="test", methods={"GET", "POST"}, host="localhost", schemes={"http", "https"})
+     * @Route("/test/{age<\d+>?0}", name="test", methods={"GET", "POST"}, schemes={"http", "https"})
      */
     public function test(Request $request, $age) {    
         // $age c'est le parametre qu'on a défini dans routes.yaml dans le path /test/{age}
